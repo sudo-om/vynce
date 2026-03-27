@@ -36,3 +36,4 @@ build/
 .env
 application-*.yml
 application-*.properties
+.DS_Store
