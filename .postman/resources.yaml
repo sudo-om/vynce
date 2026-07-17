@@ -1,0 +1,10 @@
+workspace:
+  id: 9aa2e2e7-5c4f-47cc-869f-879833b51df6
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Vynce-API: 34715424-78cce45e-319c-4db6-927e-c53e5f344df8
+  environments:
+    ../postman/environments/Vynce-API.environment.yaml: 34715424-59109eb0-86cd-4701-a03e-79373ff4e36c

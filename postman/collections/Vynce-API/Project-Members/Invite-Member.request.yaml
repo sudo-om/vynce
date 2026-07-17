@@ -1,0 +1,15 @@
+$kind: http-request
+name: Invite Member
+method: POST
+url: '{{baseUrl}}/api/projects/{{projectId}}/members'
+order: 2000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "member@example.com",
+      "role": "EDITOR"
+    }

@@ -1,5 +1,6 @@
 package com.ompatil.projects.vynce.entity;
 
+
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -18,8 +19,7 @@ import java.time.Instant;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProjectFile {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -37,4 +37,3 @@ public class ProjectFile {
     @UpdateTimestamp
     Instant updatedAt;
 }
-

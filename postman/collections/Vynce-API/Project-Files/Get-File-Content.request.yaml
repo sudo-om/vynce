@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get File Content
+method: GET
+url: '{{baseUrl}}/api/projects/{{projectId}}/files/{{filePath}}'
+order: 2000

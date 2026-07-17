@@ -1,4 +1,4 @@
 package com.ompatil.projects.vynce.dto.subscription;
 
-public record PortalResponse() {
+public record PortalResponse(String portalUrl) {
 }

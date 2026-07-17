@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Project Members
+method: GET
+url: '{{baseUrl}}/api/projects/{{projectId}}/members'
+order: 1000

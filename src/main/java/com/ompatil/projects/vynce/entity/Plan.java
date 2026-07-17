@@ -28,4 +28,3 @@ public class Plan {
 
     Boolean active;
 }
-

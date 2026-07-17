@@ -1,0 +1,5 @@
+$kind: http-request
+name: Open Customer Portal
+method: POST
+url: '{{baseUrl}}/api/payments/portal'
+order: 4000

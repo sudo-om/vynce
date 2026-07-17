@@ -1,0 +1,5 @@
+$kind: http-request
+name: Remove Member
+method: DELETE
+url: '{{baseUrl}}/api/projects/{{projectId}}/members/{{memberId}}'
+order: 4000

@@ -1,0 +1,13 @@
+$kind: http-request
+name: Payment Webhook
+method: POST
+url: '{{baseUrl}}/webhooks/payment'
+order: 5000
+auth:
+  type: noauth
+headers:
+  - key: Stripe-Signature
+    value: '{{stripeSignature}}'
+body:
+  type: text
+  content: '<stripe_webhook_payload>'

@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Plans
+method: GET
+url: '{{baseUrl}}/api/plans'
+order: 1000

@@ -1,0 +1,44 @@
+$kind: http-request
+name: Login
+method: POST
+url: "{{baseUrl}}/api/auth/login"
+scripts:
+  - type: afterResponse
+    code: |-
+      // Parse the JSON response
+      const response = pm.response.json();
+
+      // Pull the token (adjust 'response.token' based on your actual payload structure)
+      const token = response.token; 
+
+      if (token) {
+          // Save to a collection variable so it stays organized inside this folder/collection
+          pm.collectionVariables.set("jwt_token", token);
+          console.log("✅ Token successfully captured and updated!");
+      } else {
+          console.error("❌ Token not found in the response. Check your JSON path.");
+      }
+    language: text/javascript
+order: 2000
+auth:
+  type: noauth
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "Om@example.com",
+      "password": "password123"
+    }
+events:
+  - listen: test
+    script: |-
+      const json = pm.response.json();
+      if (json.token) {
+          pm.environment.set("token", json.token);
+          pm.test("Token saved to environment", () => pm.expect(json.token).to.be.a("string"));
+      } else {
+          pm.test("Token present in response", () => pm.expect(json).to.have.property("token"));
+      }
+      pm.test("Status code is 200", () => pm.response.to.have.status(200));

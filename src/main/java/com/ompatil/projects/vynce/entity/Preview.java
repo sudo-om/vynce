@@ -1,5 +1,6 @@
 package com.ompatil.projects.vynce.entity;
 
+import com.ompatil.projects.vynce.enums.PreviewStatus;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

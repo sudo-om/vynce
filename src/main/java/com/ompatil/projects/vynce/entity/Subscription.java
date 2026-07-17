@@ -1,5 +1,6 @@
 package com.ompatil.projects.vynce.entity;
 
+import com.ompatil.projects.vynce.enums.SubscriptionStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;

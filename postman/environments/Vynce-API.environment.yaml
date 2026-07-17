@@ -1,0 +1,8 @@
+name: Vynce API
+values:
+  - key: baseUrl
+    value: 'http://localhost:8080'
+  - key: projectId
+    value: '1'
+  - key: memberId
+    value: '1'

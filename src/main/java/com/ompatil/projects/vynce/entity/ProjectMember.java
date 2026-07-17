@@ -1,11 +1,13 @@
 package com.ompatil.projects.vynce.entity;
 
+import com.ompatil.projects.vynce.enums.ProjectRole;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
+@Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity

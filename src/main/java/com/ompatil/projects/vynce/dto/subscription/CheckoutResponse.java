@@ -1,4 +1,4 @@
 package com.ompatil.projects.vynce.dto.subscription;
 
-public record CheckoutResponse() {
+public record CheckoutResponse(String checkoutUrl) {
 }

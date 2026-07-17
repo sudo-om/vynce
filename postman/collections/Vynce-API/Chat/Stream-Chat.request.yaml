@@ -1,0 +1,17 @@
+$kind: http-request
+name: Stream Chat
+method: POST
+url: '{{baseUrl}}/api/chat/stream'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Accept
+    value: text/event-stream
+body:
+  type: json
+  content: |-
+    {
+      "message": "Generate a React component for a login form",
+      "projectId": 1
+    }

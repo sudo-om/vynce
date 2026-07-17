@@ -1,11 +1,13 @@
 package com.ompatil.projects.vynce.entity;
 
+import com.ompatil.projects.vynce.enums.MessageRole;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.Instant;
+
 
 @Entity
 @Table(name = "chat_messages")
